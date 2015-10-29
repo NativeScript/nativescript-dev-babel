@@ -1,0 +1,31 @@
+{
+  "name": "nativescript-dev-babel",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "nativescript": {
+    "hooks": [
+      {
+        "type": "after-prepare",
+        "script": "lib/after-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "author": "NativeScript",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/nativescript-dev-babel.git"
+  },
+  "dependencies": {
+    "glob": "^5.0.15",
+    "minimatch": "^3.0.0",
+    "nativescript-hook": "^0.1.1"
+  }
+}
